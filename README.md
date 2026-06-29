@@ -40,20 +40,6 @@ Além de servir como um ambiente de divulgação institucional, o projeto també
 * Animações utilizando JavaScript.
 * Interface inspirada em portais institucionais modernos.
 
-## Futuras Melhorias
-
-O projeto foi estruturado para possibilitar futuras expansões, como:
-
-* Sistema de pesquisa de projetos.
-* Filtros por categoria (Ensino, Pesquisa e Extensão).
-* Cadastro de projetos por meio de banco de dados.
-* Painel administrativo.
-* Galeria de imagens.
-* Calendário de eventos.
-* Área de notícias.
-* Integração com redes sociais do IFRS.
-* Modo escuro (Dark Mode).
-
 ## Desenvolvido por
 
-Projeto desenvolvido como atividade acadêmica utilizando HTML, CSS e JavaScript, com foco na divulgação dos projetos do Instituto Federal do Rio Grande do Sul – Campus Ibirubá.
+Joaquim Rossolen Debiasi
