@@ -1,0 +1,613 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef2f5;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(0,90,50,.75);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    z-index:1000;
+
+    transition:.4s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.logo h2{
+
+    color:white;
+    font-size:30px;
+    letter-spacing:1px;
+
+}
+
+nav{
+
+    display:flex;
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    background:#9cffb3;
+
+    left:0;
+
+    bottom:-5px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#9cffb3;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(
+    rgba(0,70,35,.70),
+    rgba(0,0,0,.60)
+    ),
+
+    url("imagens/campus.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 10%;
+
+}
+
+.hero-content{
+
+    color:white;
+
+    max-width:700px;
+
+    animation:fadeLeft 1s;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    line-height:35px;
+
+    margin-bottom:35px;
+
+}
+
+button{
+
+    padding:16px 38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#009944;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    background:#00b84f;
+
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+section{
+
+    padding:100px 10%;
+
+}
+
+.titulo{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    font-size:40px;
+
+    color:#006633;
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.card:hover{
+
+    transform:
+
+    translateY(-12px)
+    scale(1.02);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.20);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card-info{
+
+    padding:25px;
+
+}
+
+.card-info h3{
+
+    color:#006633;
+
+    margin-bottom:15px;
+
+    font-size:25px;
+
+}
+
+.card-info p{
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+/* ===========================
+   SOBRE
+=========================== */
+
+#sobre{
+
+    text-align:center;
+
+    background:white;
+
+}
+
+#sobre h2{
+
+    color:#006633;
+
+    margin-bottom:25px;
+
+}
+
+#sobre p{
+
+    font-size:19px;
+
+    line-height:35px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#ffffff;
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px;
+
+}
+
+footer p{
+
+    margin-top:10px;
+
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+
+    rgba(0,0,0,.65);
+
+    backdrop-filter:blur(8px);
+
+    z-index:5000;
+
+    padding:20px;
+
+}
+
+.modal-content{
+
+    background:white;
+
+    width:850px;
+
+    max-width:95%;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    animation:zoom .4s;
+
+    box-shadow:
+
+    0 30px 60px rgba(0,0,0,.35);
+
+    position:relative;
+
+}
+
+.modal-content img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+}
+
+.modal-body{
+
+    padding:35px;
+
+}
+
+.modal-body h2{
+
+    color:#006633;
+
+    margin-bottom:20px;
+
+    font-size:34px;
+
+}
+
+.modal-body p{
+
+    line-height:33px;
+
+    color:#555;
+
+    font-size:18px;
+
+    white-space:pre-line;
+
+}
+
+#fechar{
+
+    position:absolute;
+
+    top:18px;
+
+    right:25px;
+
+    color:white;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+#fechar:hover{
+
+    transform:rotate(90deg);
+
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:1s;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes zoom{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    justify-content:center;
+
+    padding:0 30px;
+
+}
+
+.hero h1{
+
+    font-size:45px;
+
+}
+
+.hero p{
+
+    font-size:19px;
+
+    line-height:32px;
+
+}
+
+.modal-content img{
+
+    height:220px;
+
+}
+
+.modal-body{
+
+    padding:25px;
+
+}
+
+.modal-body h2{
+
+    font-size:28px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+.info{
+
+    display: flex;
+    justify-content: space-around;
+}
