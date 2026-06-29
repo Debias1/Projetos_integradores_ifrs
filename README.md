@@ -1,4 +1,4 @@
-# Portal de Projetos IFRS Campus Ibirubá 🌱
+# Portal de Projetos IFRS Campus Ibirubá 
 
 ## O que é o Portal de Projetos IFRS Campus Ibirubá
 
