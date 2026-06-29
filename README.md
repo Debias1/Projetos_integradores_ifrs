@@ -40,6 +40,9 @@ Além de servir como um ambiente de divulgação institucional, o projeto també
 * Animações utilizando JavaScript.
 * Interface inspirada em portais institucionais modernos.
 
+## Link do Projeto
+  https://projetos-integradores.netlify.app/
+
 ## Desenvolvido por
 
 Joaquim Rossolen Debiasi
